@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Actividad 1. 1c</title>
+</head>
+<body>
+    <h1>Lista de Pokemones por tipo </h1>
+    <button id="btnConsultarTipo">Consultar Pokémon por Tipo</button>
+    <button onclick="irAPagina(`index.html`)">Inicio</button>
+    <h2>Tipos de Pokemon</h2>
+    <ul class="tipos">
+        <li>Water</li>
+        <li>Fire</li>
+        <li>Grass</li>
+        <li>Electric</li>
+        <li>Psychic</li>
+        <li>Flying</li>
+        <li>Fairy</li>
+        <li>Poison</li>
+        <li>Rock</li>
+        <li>Ground</li>
+        <li>Normal</li>
+        <li>Fighting</li>
+        <li>Steel</li>
+        <li>Ice</li>
+        <li>Bug</li>
+        <li>Ghost</li>
+        <li>Dark</li>
+        <li>Dragon</li>
+    </ul>
+    <ul id="pokemonList"></ul>
+    <ul id="listaPokemon"></ul>
+<script>
+document.getElementById('btnConsultarTipo').addEventListener('click', () => {
+    const tipoPokemon = prompt('Ingresa el tipo de Pokemon :');
+    if (tipoPokemon) {
+      obtenerPokemonPorTipo(tipoPokemon.toLowerCase());
+    }
+  });
+</script>
+<script src="./script/script.js"></script>
+</body>
+</html>
